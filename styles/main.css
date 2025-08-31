@@ -1,4 +1,4 @@
-/* Reset some defaults */
+/* General body setup */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,7 +10,7 @@ body {
     background-position: top left;
 }
 
-/* Keep layout centered for main sections */
+/* Layout containers */
 header,
 main,
 footer {
@@ -32,10 +32,8 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;            /* horizontal center of text */
-    justify-content: center;        /* vertical center of text */
     text-align: center;
     color: rgb(118, 184, 238);
-    overflow: hidden;
 }
 
 /* Logo pinned to top-left */
@@ -43,7 +41,7 @@ header {
     position: absolute;  /* relative to header */
     top: 20px;           /* distance from top */
     left: 20px;          /* distance from left */
-    width: 160px;        /* smaller for better scaling */
+    width: 256px;        /* adjust as needed */
     height: auto;
 }
 
@@ -55,41 +53,46 @@ header {
 
 .header-content p {
     margin: 10px 0 0 0;  /* space below first line */
-    font-size: 3em;
+    font-size: 4em;
 }
 
-/* Headings & text */
+/* Section headings */
 h2 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 3em;
     color: blue;
 }
 
+/* List styling */
 li {
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
+/* Email link */
 .email-link {
     color: #5707ec;
     text-decoration: underline;
 }
 
+/* Main content */
 main {
     padding: 40px 20px;
     color: #0f0f0f;
 }
 
+/* Footer with background */
 footer {
     background-image: url('../images/footer_bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
-    font-size: 1.2em;
-    color: rgb(12, 27, 238);
+    font-size: 1.5em;
+    color: white;
     padding: 20px;
 }
 
+/* Generic button style */
 a.button {
     display: inline-block;
     margin-top: 10px;
@@ -100,32 +103,25 @@ a.button {
     border-radius: 5px;
 }
 
+/* Divider */
 hr {
     border: none;
     border-top: 2px solid #1f2ce4;
     margin: 40px 0;
 }
 
-/* Navigation bar */
+/* Navigation bar (original style, improved) */
 .navbar {
-    position: absolute;
-    top: 20px;
-    left: 50%;                   /* center horizontally */
-    transform: translateX(-50%);
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.nav-links {
-    display: flex;
-    gap: 25px; /* spacing between buttons */
+    justify-content: center;   /* centered across screen */
+    gap: 20px;                 /* spacing between buttons */
+    margin-top: 20px;
 }
 
 .nav-button {
     text-decoration: none;
-    color: rgb(237, 238, 187);
-    background-color: rgb(26, 10, 243);
+    color: rgb(20, 43, 27);
+    background-color: rgb(203, 202, 219);
     padding: 10px 20px;
     border-radius: 7px;
     font-size: 1.2em;
@@ -133,64 +129,19 @@ hr {
 }
 
 .nav-button:hover {
-    background-color: rgb(33, 25, 54);
+    background-color: rgb(147, 57, 150);
 }
 
-/* Hamburger button */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 2em;
-    color: white;
-    cursor: pointer;
-}
-
-/* ===================== */
-/* Responsive Styling    */
-/* ===================== */
-
-/* Tablet adjustments */
-@media (max-width: 1024px) {
+/* Responsive text scaling */
+@media (max-width: 768px) {
     .header-content h1 {
-        font-size: 4em;
+        font-size: 3em;
     }
     .header-content p {
         font-size: 2em;
     }
-    .header-logo {
-        width: 120px;
-    }
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-    .header-content h1 {
-        font-size: 2.5em;
-    }
-    .header-content p {
-        font-size: 1.5em;
-    }
-    .header-logo {
-        width: 90px;
-    }
-
-    .nav-links {
-        display: none;            /* hidden by default */
-        flex-direction: column;
-        gap: 15px;
-        margin-top: 10px;
-        background-color: rgba(0,0,0,0.8);
-        padding: 15px;
-        border-radius: 8px;
-    }
-
-    .nav-links.active {
-        display: flex; /* show when toggled */
-    }
-
-    .menu-toggle {
-        display: block;
-        margin-bottom: 10px;
+    .nav-button {
+        font-size: 1em;
+        padding: 8px 14px;
     }
 }

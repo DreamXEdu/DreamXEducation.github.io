@@ -12,7 +12,6 @@
 <body>
     <header>
         <img src="images/logo.png" alt="DreamX Logo" class="header-logo">
-        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
         <nav class="navbar">
             <a href="index.html" class="nav-button">首页</a>
             <a href="about.html" class="nav-button">关于我们</a>
@@ -38,7 +37,7 @@
 
         <hr> <!-- Divider -->
 
-        <a class="button" href="#contact">预约咨询</a>
+        <a class="button" href="mailto:dreamxeduadvisors@gmail.com">预约咨询</a>
 
         <h2 id="contact">Contact Us</h2>
         <p>Email: <a class="email-link" href="mailto:dreamxeduadvisors@gmail.com">dreamxeduadvisors@gmail.com</a></p>
@@ -52,17 +51,5 @@
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
-
-<script>
-  // Hamburger menu toggle
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-
-    toggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  });
-</script>
 
 </html>
