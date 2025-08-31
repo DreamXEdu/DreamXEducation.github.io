@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.5;
-    background-image: url('./images/main_bg.jpg');
+    background-image: url('../images/main_bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,13 +20,13 @@ footer {
 }
 
 header {
-    color: rgb(228, 15, 61);
+    color: rgb(31, 29, 29);
     text-align: center;
     padding: 60px 20px;
 }
 .header-logo {
-    width: 128px;
-    height: 128px;
+    width: 256px;
+    height: 256px;
     object-fit: contain;
     position: absolute;
     top: 20px;
@@ -66,12 +66,12 @@ main {
 }
 
 footer {
-    background-image: url('./images/footer-bg.jpg');
+    background-image: url('../images/footer-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
-    font-size: 0.9em;
+    font-size: 1.5em;
     color: white;
     padding: 20px;
 }
