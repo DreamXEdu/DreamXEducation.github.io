@@ -12,23 +12,20 @@ body {
 header,
 main,
 footer {
-    max-width: 1200px;
+    max-width: 1600px;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
 }
 
 header {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     color: rgb(228, 15, 61);
     text-align: center;
     padding: 60px 20px;
 }
 .header-logo {
-    width: 32px;
-    height: 32px;
+    width: 128px;
+    height: 128px;
     object-fit: contain;
     position: absolute;
     top: 20px;
