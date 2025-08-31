@@ -27,8 +27,8 @@ header {
     padding: 60px 20px;
 }
 .header-logo {
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
     object-fit: contain;
     position: absolute;
     top: 20px;
@@ -63,9 +63,6 @@ li {
 }
 
 main {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     padding: 40px 20px;
     color: #0f0f0f;
 }
@@ -89,4 +86,10 @@ a.button {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #1fe45a;
+    margin: 40px 0;
 }
