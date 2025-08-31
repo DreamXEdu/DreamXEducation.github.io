@@ -31,7 +31,7 @@ header {
     flex-direction: column;
     align-items: center;            /* horizontal center of text */
     text-align: center;
-    color: rgb(5, 140, 250);
+    color: rgb(118, 184, 238);
 }
 
 /* Logo pinned to top-left */
@@ -57,7 +57,7 @@ header {
 h2 {
     margin: 0;
     font-size: 2.5em;
-    color: rgb(12, 8, 248);
+    color: rgb(1, 16, 226);
 }
 
 li {
