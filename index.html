@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DreamX Education Advisors</title>
+    <meta name="description" content="DreamX 教育顾问，帮助学生实现求学之梦，提供大学申请、文书辅导、面试准备等服务。">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+            /* Full page background */
+            background-image: url('images/body_bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        header,
+        main,
+        footer {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-image: url('images/header_bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: rgb(10, 10, 10);
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            background-image: url('images/main_bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        footer {
+            background-image: url('images/footer_bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+            font-size: 0.9em;
+            color: white;
+            padding: 20px;
+        }
+
+        a.button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 16px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>DreamX 教育顾问</h1>
+        <p>DreamX 帮助学生们实现求学之梦</p>
+    </header>
+
+    <main>
+        <h2>我们的服务</h2>
+        <ul>
+            <li>大学申请策略</li>
+            <li>文书辅导</li>
+            <li>面试准备</li>
+            <li>考试规划指导</li>
+        </ul>
+        <a class="button" href="#contact">预约咨询</a>
+
+        <h2 id="contact">Contact Us</h2>
+        <p>Email: <a href="mailto:dreamxeduadvisors@gmail.com">dreamxeduadvisors@gmail.com</a></p>
+    </main>
+
+    <footer>
+        © <span id="year"></span> DreamX Education Advisors
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
