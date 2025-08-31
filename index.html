@@ -12,11 +12,16 @@
 <body>
     <header>
         <img src="images/logo.png" alt="DreamX Logo" class="header-logo">
-        <nav class="navbar">
-            <a href="index.html" class="nav-button">首页</a>
-            <a href="about.html" class="nav-button">关于我们</a>
-            <a href="services.html" class="nav-button">服务项目</a>
-            <a href="contact.html" class="nav-button">联系我们</a>
+
+        <!-- Hamburger button (mobile only) -->
+        <button class="menu-toggle">&#9776;</button>
+
+        <!-- Navigation bar -->
+        <nav class="navbar nav-links">
+        <a href="index.html" class="nav-button">Home</a>
+        <a href="about.html" class="nav-button">About</a>
+        <a href="services.html" class="nav-button">Services</a>
+        <a href="contact.html" class="nav-button">Contact</a>
         </nav>
         <div class="header-content">
             <h1>DreamX 教育顾问</h1>
@@ -51,5 +56,16 @@
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+});
+</script>
 
 </html>

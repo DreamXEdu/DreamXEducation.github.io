@@ -1,3 +1,4 @@
+/* Main CSS for DreamXEducation.github.io */
 /* General body setup */
 body {
     font-family: Arial, sans-serif;
@@ -127,38 +128,86 @@ hr {
     border-radius: 7px;
     font-size: 1.2em;
     transition: background-color 0.3s;
+    white-space: nowrap;       /* prevent text from breaking */
 }
 
 .nav-button:hover {
     background-color: rgb(147, 57, 150);
 }
 
-/* Responsive adjustments for phones */
-@media (max-width: 768px) {
-    /* Smaller logo */
-    .header-logo {
-        width: 120px;
-    }
+/* Hamburger button (mobile only) */
+.menu-toggle {
+    display: none;            /* hidden on desktop */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: rgb(20, 43, 27);
+    cursor: pointer;
+}
 
+/* --- Responsive Adjustments --- */
+
+/* Tablet (<= 768px) */
+@media (max-width: 768px) {
     .header-content h1 {
         font-size: 3em;
     }
-
     .header-content p {
         font-size: 2em;
     }
-
-    /* Stack nav buttons vertically */
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;  /* more spacing between buttons */
+    .header-logo {
+        width: 120px;
     }
-
     .nav-button {
         font-size: 1em;
-        padding: 10px 16px;
-        width: 80%;      /* full-width buttons on mobile */
+        padding: 8px 14px;
+    }
+}
+
+/* Phone (<= 480px) */
+@media (max-width: 480px) {
+    /* Show hamburger */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide nav links initially */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-top: 10px;
+    }
+
+    /* Show nav links when active */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Stack nav buttons vertically */
+    .nav-button {
+        width: 80%;
         text-align: center;
+        font-size: 1em;
+        padding: 10px 16px;
+    }
+
+    /* Header logo smaller */
+    .header-logo {
+        width: 90px;
+        top: 10px;
+        left: 10px;
+    }
+
+    /* Header text smaller */
+    .header-content h1 {
+        font-size: 2em;
+    }
+    .header-content p {
+        font-size: 1.3em;
     }
 }
