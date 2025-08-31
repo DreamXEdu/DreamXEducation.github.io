@@ -3,11 +3,10 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.5;
-    background-image: url('../images/main_bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-image: url('../images/header_bg.jpg');
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: top left;
 }
 
 header,
@@ -20,20 +19,27 @@ footer {
 }
 
 header {
-    color: rgb(31, 29, 29);
+    background-image: url('../images/main_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    position: relative;
+    color: rgb(30, 29, 31);
     text-align: center;
     padding: 60px 20px;
 }
+
 .header-logo {
-    width: 256px;
-    height: 256px;
+    width: 1024px;
+    height: 1024px;
     object-fit: contain;
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 20px;
 }
+
 header {
-    position: relative; 
+    position: relative;
 }
 
 h1 {
@@ -66,7 +72,7 @@ main {
 }
 
 footer {
-    background-image: url('../images/footer-bg.jpg');
+    background-image: url('../images/footer_bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -88,6 +94,6 @@ a.button {
 
 hr {
     border: none;
-    border-top: 2px solid #1fe45a;
+    border-top: 2px solid #1f2ce4;
     margin: 40px 0;
 }
