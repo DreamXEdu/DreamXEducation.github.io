@@ -57,7 +57,7 @@ header {
 h2 {
     margin: 0;
     font-size: 2.5em;
-    color: rgb(255, 255, 255);
+    color: rgb(10, 6, 240);
 }
 
 li {
@@ -111,14 +111,14 @@ hr {
 
 .nav-button {
     text-decoration: none;
-    color: white;
-    background-color: rgb(30, 29, 31);
+    color: rgb(237, 238, 187);
+    background-color: rgb(26, 10, 243);
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 7px;
     font-size: 1.2em;
     transition: background-color 0.3s;
 }
 
 .nav-button:hover {
-    background-color: rgb(228, 15, 61);
+    background-color: rgb(33, 25, 54);
 }
