@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.5;
-    background-image: url('../images/header_bg.jpg');
+    background-image: url('../images/body_bg.jpg');
     background-repeat: repeat;
     background-size: cover;
     background-position: top left;
@@ -18,34 +18,41 @@ footer {
     padding: 20px;
 }
 
+/* Header full-screen background */
 header {
-    background-image: url('../images/main_bg.jpg'); /* header background */
-    background-repeat: no-repeat;                   /* don’t repeat */
-    background-position: center;
-    background-size: cover;                         /* fill entire screen */
-    height: 100vh;                                  /* full viewport height */
-    width: 100%;
     position: relative;
-    color: rgb(30, 29, 31);
+    width: 100%;
+    height: 100vh;                  /* full viewport height */
+    background-image: url('../images/header_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;        /* vertical center of text */
+    align-items: center;            /* horizontal center of text */
     text-align: center;
-    padding: 60px 20px;
-    display: flex;                                  /* align logo + text */
-    align-items: flex-start;                        /* top of header */
-    justify-content: center;                        /* center horizontally */
+    color: rgb(30, 29, 31);
 }
 
+/* Logo pinned to top-left */
 .header-logo {
-    width: 128px;            
-    height: auto;             
-    margin-right: 20px;        
+    position: absolute;  /* relative to header */
+    top: 20px;           /* distance from top */
+    left: 20px;          /* distance from left */
+    width: 128px;        /* adjust as needed */
+    height: auto;
 }
 
-h1 {
+/* Header text block */
+.header-content h1 {
     margin: 0;
     font-size: 3em;
 }
 
-p {
+.header-content p {
+    margin: 10px 0 0 0;  /* space below first line */
     font-size: 2em;
 }
 
