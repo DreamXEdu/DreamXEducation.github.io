@@ -39,9 +39,9 @@ header {
 /* Logo pinned to top-left */
 .header-logo {
     position: absolute;  /* relative to header */
-    top: 20px;           /* distance from top */
-    left: 20px;          /* distance from left */
-    width: 256px;        /* adjust as needed */
+    top: 20px;           
+    left: 20px;          
+    width: 180px;        /* default desktop size */
     height: auto;
 }
 
@@ -52,7 +52,7 @@ header {
 }
 
 .header-content p {
-    margin: 10px 0 0 0;  /* space below first line */
+    margin: 10px 0 0 0;
     font-size: 4em;
 }
 
@@ -106,73 +106,59 @@ a.button {
 /* Divider */
 hr {
     border: none;
-    border-top: 2px solid #555fee;
+    border-top: 2px solid #1f2ce4;
     margin: 40px 0;
 }
 
-/* Navigation bar (original style, improved) */
+/* Navigation bar */
 .navbar {
     display: flex;
-    justify-content: center;   /* centered across screen */
-    gap: 20px;                 /* spacing between buttons */
+    justify-content: center;  
+    gap: 20px;                 /* space between buttons */
     margin-top: 20px;
-    flex-wrap: wrap;           /* allow wrapping on tablets */
+    flex-wrap: wrap;           /* allow wrapping if too many */
 }
 
 .nav-button {
     text-decoration: none;
-    color: rgb(16, 34, 21);
+    color: rgb(20, 43, 27);
     background-color: rgb(203, 202, 219);
     padding: 10px 20px;
     border-radius: 7px;
     font-size: 1.2em;
     transition: background-color 0.3s;
-    white-space: nowrap;       /* prevent text from breaking */
 }
 
 .nav-button:hover {
-    background-color: rgb(129, 27, 133);
+    background-color: rgb(147, 57, 150);
 }
 
-/* --- Responsive Adjustments --- */
-
-/* Tablet (<= 768px) */
+/* Responsive adjustments for phones */
 @media (max-width: 768px) {
+    /* Smaller logo */
+    .header-logo {
+        width: 120px;
+    }
+
     .header-content h1 {
         font-size: 3em;
     }
+
     .header-content p {
         font-size: 2em;
     }
-    .header-logo {
-        width: 180px;
+
+    /* Stack nav buttons vertically */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;  /* more spacing between buttons */
     }
+
     .nav-button {
         font-size: 1em;
-        padding: 8px 14px;
-    }
-}
-
-/* Phone (<= 480px) */
-@media (max-width: 480px) {
-    .header-content h1 {
-        font-size: 2em;
-    }
-    .header-content p {
-        font-size: 1.3em;
-    }
-    .header-logo {
-        width: 120px;
-        top: 10px;
-        left: 10px;
-    }
-    .navbar {
-        flex-direction: column;  /* stack buttons */
-        align-items: center;
-        gap: 12px;
-    }
-    .nav-button {
-        width: 80%;             /* wide buttons */
+        padding: 10px 16px;
+        width: 80%;      /* full-width buttons on mobile */
         text-align: center;
     }
 }
