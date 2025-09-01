@@ -10,21 +10,28 @@
 </head>
 
 <body>
-    <nav class="navbar nav-links">
-        <!-- Logo inside navbar -->
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <!-- Desktop logo inside navbar -->
         <a href="index.html" class="nav-logo desktop-logo">
             <img src="images/logo.png" alt="DreamX Logo">
         </a>
-        <a href="index.html" class="nav-button">首页</a>
-        <a href="about.html" class="nav-button">关于我们</a>
-        <a href="services.html" class="nav-button">服务项目</a>
-        <a href="test.html" class="nav-button">背景提升</a>
-        <a href="case.html" class="nav-button">成功案例</a>
-        <a href="contact.html" class="nav-button">联系我们</a>
 
+        <!-- Navigation buttons -->
+        <div class="nav-links">
+            <a href="index.html" class="nav-button">首页</a>
+            <a href="about.html" class="nav-button">关于我们</a>
+            <a href="services.html" class="nav-button">服务项目</a>
+            <a href="test.html" class="nav-button">背景提升</a>
+            <a href="case.html" class="nav-button">成功案例</a>
+            <a href="contact.html" class="nav-button">联系我们</a>
+        </div>
+
+        <!-- Hamburger menu button for mobile -->
         <button class="menu-toggle">&#9776;</button>
     </nav>
 
+    <!-- Header -->
     <header>
         <!-- Mobile logo -->
         <a href="index.html" class="nav-logo mobile-logo">
@@ -37,11 +44,9 @@
             <p>第三句话</p>
             <p>第四句话</p>
         </div>
-
     </header>
 
     <main>
-
         <h2>我们的介绍</h2>
         <ul>
             <li>团队</li>
@@ -61,19 +66,19 @@
     </footer>
 
     <script>
+        // Set current year
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Hamburger menu toggle
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggle = document.querySelector(".menu-toggle");
+            const navLinks = document.querySelector(".nav-links");
+
+            toggle.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        });
     </script>
 </body>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-
-    toggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-    });
-});
-</script>
 
 </html>
