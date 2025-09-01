@@ -1,4 +1,3 @@
-/* Main CSS for DreamXEducation.github.io */
 /* General body setup */
 body {
     font-family: Arial, sans-serif;
@@ -35,6 +34,207 @@ header {
     align-items: center;            
     text-align: center;
     color: rgb(118, 184, 238);
+    padding-top: 80px; /* space for fixed navbar */
 }
 
-/* Logo pinned t*
+/* Logo pinned to top-left */
+.header-logo {
+    position: absolute;  
+    top: 20px;           
+    left: 20px;          
+    width: 180px;        
+    height: auto;
+}
+
+/* Header text block */
+.header-content h1 {
+    margin: 0;
+    font-size: 6em;
+}
+
+.header-content p {
+    margin: 10px 0 0 0;  
+    font-size: 4em;
+}
+
+/* Section headings */
+h2 {
+    margin: 0;
+    font-size: 3em;
+    color: blue;
+}
+
+/* List styling */
+li {
+    font-size: 1.5em;
+}
+
+/* Email link */
+.email-link {
+    color: #5707ec;
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    padding: 40px 20px;
+    color: #0f0f0f;
+}
+
+/* Footer with background */
+footer {
+    background-image: url('../images/footer_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    padding: 20px;
+}
+
+/* Generic button style */
+a.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 16px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Divider */
+hr {
+    border: none;
+    border-top: 2px solid #1f2ce4;
+    margin: 40px 0;
+}
+
+/* Navigation bar fixed at top */
+.navbar {
+    display: flex;
+    justify-content: flex-end;  
+    gap: 20px;                  
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    position: fixed;   
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;      
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Nav buttons */
+.nav-button {
+    text-decoration: none;
+    color: rgb(20, 43, 27);
+    background-color: rgb(203, 202, 219);
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+    white-space: nowrap;       
+}
+
+.nav-button:hover {
+    background-color: rgb(147, 57, 150);
+    color: white;
+}
+
+/* Hamburger button hidden on desktop */
+.menu-toggle {
+    display: none;            
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: rgb(20, 43, 27);
+    cursor: pointer;
+}
+
+/* --- Responsive Adjustments --- */
+
+/* Tablet (<= 768px) */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 3em;
+    }
+    .header-content p {
+        font-size: 2em;
+    }
+    .header-logo {
+        width: 120px;
+    }
+    .nav-button {
+        font-size: 1em;
+        padding: 8px 14px;
+    }
+}
+
+/* Phone (<= 480px) */
+@media (max-width: 480px) {
+    /* Show hamburger button */
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        z-index: 101; /* above navbar */
+    }
+
+    /* Hide nav links initially with height 0 */
+    .nav-links {
+        display: flex;                /* keep flex for vertical layout */
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 50px; /* below hamburger */
+        right: 20px;
+        background-color: rgba(255,255,255,0.95);
+        padding: 0 10px;             /* padding for container */
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        z-index: 100;
+
+        /* animation setup */
+        max-height: 0;               /* collapsed */
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    }
+
+    /* Show nav links when active */
+    .nav-links.active {
+        max-height: 500px;           /* expand height (adjust if needed) */
+        padding: 10px;               /* show padding */
+    }
+
+    /* Nav buttons style for mobile */
+    .nav-button {
+        width: 150px; 
+        text-align: left;
+        background-color: transparent;
+        padding: 10px 16px;
+        border-radius: 5px;
+    }
+
+    .nav-button:hover {
+        background-color: rgb(147, 57, 150);
+        color: white;
+    }
+
+    /* Header logo smaller */
+    .header-logo {
+        width: 90px;
+        top: 10px;
+        left: 10px;
+    }
+
+    /* Header text smaller */
+    .header-content h1 {
+        font-size: 2em;
+    }
+    .header-content p {
+        font-size: 1.3em;
+    }
+}
