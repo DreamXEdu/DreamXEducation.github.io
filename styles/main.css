@@ -112,12 +112,28 @@ hr {
 }
 
 /* --- Navigation Bar --- */
-/* Logo inside navbar */
-.nav-logo img {
-    width: 120px;        /* adjust size */
+/* Desktop logo inside navbar */
+.nav-logo.desktop-logo img {
+    width: 60px;
     height: auto;
-    margin-right: 20px; /* space between logo and nav buttons */
-    vertical-align: middle;
+    margin-right: 20px;
+}
+
+/* Mobile logo inside header */
+.nav-logo.mobile-logo img {
+    width: 60px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Hide mobile logo on desktop */
+.desktop-logo {
+    display: inline-block;
+}
+.mobile-logo {
+    display: none;
 }
 
 /* Adjust navbar alignment */
@@ -189,6 +205,22 @@ hr {
         width: 40px;
         margin-right: 10px;
     }
+
+    /* Hide desktop logo */
+    .desktop-logo {
+        display: none;
+    }
+
+    /* Show mobile logo */
+    .mobile-logo {
+        display: block;
+    }
+
+    /* Adjust mobile logo size if needed */
+    .mobile-logo img {
+        width: 50px;
+    }
+    
     /* Show hamburger button */
     .menu-toggle {
         display: block;
