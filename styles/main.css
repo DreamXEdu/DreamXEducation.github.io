@@ -37,15 +37,6 @@ header {
     padding-top: 80px; /* space for fixed navbar */
 }
 
-/* Logo pinned to top-left */
-.header-logo {
-    position: absolute;  
-    top: 20px;           
-    left: 20px;          
-    width: 40px;        
-    height: auto;
-}
-
 /* Header text block */
 .header-content h1 {
     margin: 0;
@@ -112,44 +103,26 @@ hr {
 }
 
 /* --- Navigation Bar --- */
-/* Desktop logo inside navbar */
-.navbar .nav-logo.desktop-logo img {
-    width: 70px;
-    height: auto;
-    vertical-align: middle;
-}
-
-/* Mobile logo inside header */
-.nav-logo.mobile-logo img {
-    width: 120px;
-    height: auto;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-/* Hide mobile logo on desktop */
-.desktop-logo {
-    display: inline-block;
-}
-.mobile-logo {
-    display: none;
-}
-
-/* Adjust navbar alignment */
 .navbar {
     display: flex;
-    justify-content: center;  /* nav buttons + logo centered */
-    align-items: center;      /* vertically center items */
-    gap: 20px;                
+    justify-content: center;  /* centered */
+    align-items: center;      /* vertically center */
+    gap: 20px;
     padding: 10px 20px;
     background-color: rgba(255, 255, 255, 0.95);
-    position: fixed;   
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;      
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Desktop logo inside navbar */
+.navbar .nav-logo.desktop-logo img {
+    width: 60px;  /* adjust this to make it bigger/smaller */
+    height: auto;
+    vertical-align: middle;
 }
 
 /* Nav buttons */
@@ -161,7 +134,7 @@ hr {
     border-radius: 7px;
     font-size: 1.2em;
     transition: background-color 0.3s;
-    white-space: nowrap;       
+    white-space: nowrap;
 }
 
 .nav-button:hover {
@@ -169,9 +142,26 @@ hr {
     color: white;
 }
 
+/* Mobile logo inside header (phones only) */
+.nav-logo.mobile-logo img {
+    width: 100px;  /* larger for mobile header */
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Hide mobile logo on desktop, desktop logo on mobile */
+.desktop-logo {
+    display: inline-block;
+}
+.mobile-logo {
+    display: none;
+}
+
 /* Hamburger button hidden on desktop */
 .menu-toggle {
-    display: none;            
+    display: none;
     font-size: 2em;
     background: none;
     border: none;
@@ -189,9 +179,6 @@ hr {
     .header-content p {
         font-size: 2em;
     }
-    .header-logo {
-        width: 120px;
-    }
     .nav-button {
         font-size: 1em;
         padding: 8px 14px;
@@ -200,70 +187,51 @@ hr {
 
 /* Phone (<= 480px) */
 @media (max-width: 480px) {
-    /* Reduce logo size for phones */
-    .nav-logo img {
-        width: 40px;
-        margin-right: 10px;
-    }
-
-    /* Hide desktop logo */
+    /* Hide desktop navbar logo */
     .desktop-logo {
-        display: none;
-    }
-    /* Hide navbar logo on mobile */
-    .nav-logo.desktop-logo {
-        display: none;
+        display: none !important;
     }
 
-    /* Show mobile logo */
+    /* Show mobile header logo */
     .mobile-logo {
-        display: block;
+        display: block !important;
     }
 
-    /* Adjust mobile logo size if needed */
-    .mobile-logo img {
-        width: 100px;
-        height: auto;
-    }
-
-    /* Show hamburger button */
+    /* Mobile hamburger button */
     .menu-toggle {
         display: block;
         position: fixed;
         top: 15px;
         right: 20px;
-        z-index: 101; /* above navbar */
+        z-index: 101;
     }
 
-    /* Hide nav links initially with height 0 */
+    /* Collapsed nav links */
     .nav-links {
-        display: flex;                /* keep flex for vertical layout */
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
         position: fixed;
-        top: 50px; /* below hamburger */
+        top: 50px;
         right: 20px;
         background-color: rgba(255,255,255,0.95);
-        padding: 0 10px;             /* padding for container */
+        padding: 0 10px;
         border-radius: 8px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         z-index: 100;
-
-        /* animation setup */
-        max-height: 0;               /* collapsed */
+        max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
     }
 
-    /* Show nav links when active */
     .nav-links.active {
-        max-height: 500px;           /* expand height (adjust if needed) */
-        padding: 10px;               /* show padding */
+        max-height: 500px;
+        padding: 10px;
     }
 
     /* Nav buttons style for mobile */
     .nav-button {
-        width: 150px; 
+        width: 150px;
         text-align: left;
         background-color: transparent;
         padding: 10px 16px;
@@ -275,9 +243,9 @@ hr {
         color: white;
     }
 
-    /* Header logo smaller */
+    /* Header logo bigger on mobile */
     .header-logo {
-        width: 270px;
+        width: 200px;
         top: 10px;
         left: 10px;
     }
