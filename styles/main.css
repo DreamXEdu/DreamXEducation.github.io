@@ -114,14 +114,14 @@ hr {
 /* --- Navigation Bar --- */
 /* Desktop logo inside navbar */
 .nav-logo.desktop-logo img {
-    width: 60px;
+    width: 30px;
     height: auto;
     margin-right: 20px;
 }
 
 /* Mobile logo inside header */
 .nav-logo.mobile-logo img {
-    width: 60px;
+    width: 120px;
     height: auto;
     position: absolute;
     top: 20px;
@@ -220,7 +220,7 @@ hr {
     .mobile-logo img {
         width: 50px;
     }
-    
+
     /* Show hamburger button */
     .menu-toggle {
         display: block;
@@ -272,7 +272,7 @@ hr {
 
     /* Header logo smaller */
     .header-logo {
-        width: 90px;
+        width: 270px;
         top: 10px;
         left: 10px;
     }
