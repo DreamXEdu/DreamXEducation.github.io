@@ -37,7 +37,74 @@ header {
     padding-top: 80px; /* space for fixed navbar */
 }
 
-/* Header text block */
+/* Mobile logo inside header */
+.nav-logo.mobile-logo img {
+    width: 200px; /* Bigger mobile logo */
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Desktop logo inside navbar */
+.navbar .nav-logo.desktop-logo img {
+    width: 240px; /* 4x bigger than previous 60px */
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Hide mobile logo on desktop */
+.desktop-logo {
+    display: inline-block;
+}
+.mobile-logo {
+    display: none;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;  /* center items horizontally */
+    align-items: center;      /* vertically center items */
+    gap: 20px;                
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    position: fixed;   
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;      
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Nav buttons */
+.nav-button {
+    text-decoration: none;
+    color: rgb(20, 43, 27);
+    background-color: rgb(203, 202, 219);
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+    white-space: nowrap;       
+}
+
+.nav-button:hover {
+    background-color: rgb(147, 57, 150);
+    color: white;
+}
+
+/* Hamburger menu button hidden on desktop */
+.menu-toggle {
+    display: none;            
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: rgb(20, 43, 27);
+    cursor: pointer;
+}
+
+/* Main header text */
 .header-content h1 {
     margin: 0;
     font-size: 6em;
@@ -102,73 +169,6 @@ hr {
     margin: 40px 0;
 }
 
-/* --- Navigation Bar --- */
-.navbar {
-    display: flex;
-    justify-content: center;  /* centered */
-    align-items: center;      /* vertically center */
-    gap: 20px;
-    padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.95);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;      
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-/* Desktop logo inside navbar */
-.navbar .nav-logo.desktop-logo img {
-    width: 240px;  /* adjust this to make it bigger/smaller */
-    height: auto;
-    vertical-align: middle;
-}
-
-/* Nav buttons */
-.nav-button {
-    text-decoration: none;
-    color: rgb(20, 43, 27);
-    background-color: rgb(203, 202, 219);
-    padding: 10px 20px;
-    border-radius: 7px;
-    font-size: 1.2em;
-    transition: background-color 0.3s;
-    white-space: nowrap;
-}
-
-.nav-button:hover {
-    background-color: rgb(147, 57, 150);
-    color: white;
-}
-
-/* Mobile logo inside header (phones only) */
-.nav-logo.mobile-logo img {
-    width: 100px;  /* larger for mobile header */
-    height: auto;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-/* Hide mobile logo on desktop, desktop logo on mobile */
-.desktop-logo {
-    display: inline-block;
-}
-.mobile-logo {
-    display: none;
-}
-
-/* Hamburger button hidden on desktop */
-.menu-toggle {
-    display: none;
-    font-size: 2em;
-    background: none;
-    border: none;
-    color: rgb(20, 43, 27);
-    cursor: pointer;
-}
-
 /* --- Responsive Adjustments --- */
 
 /* Tablet (<= 768px) */
@@ -187,51 +187,59 @@ hr {
 
 /* Phone (<= 480px) */
 @media (max-width: 480px) {
-    /* Hide desktop navbar logo */
+    /* Hide desktop logo */
     .desktop-logo {
-        display: none !important;
+        display: none;
     }
 
-    /* Show mobile header logo */
+    /* Show mobile logo */
     .mobile-logo {
-        display: block !important;
+        display: block;
     }
 
-    /* Mobile hamburger button */
+    /* Adjust mobile logo size */
+    .mobile-logo img {
+        width: 200px;
+        height: auto;
+    }
+
+    /* Show hamburger button */
     .menu-toggle {
         display: block;
         position: fixed;
         top: 15px;
         right: 20px;
-        z-index: 101;
+        z-index: 101; 
     }
 
-    /* Collapsed nav links */
+    /* Hide nav links initially */
     .nav-links {
-        display: flex;
+        display: flex;                
         flex-direction: column;
         align-items: flex-start;
         position: fixed;
-        top: 50px;
+        top: 50px; 
         right: 20px;
         background-color: rgba(255,255,255,0.95);
-        padding: 0 10px;
+        padding: 0 10px;             
         border-radius: 8px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         z-index: 100;
-        max-height: 0;
+
+        max-height: 0;              
         overflow: hidden;
         transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
     }
 
+    /* Show nav links when active */
     .nav-links.active {
-        max-height: 500px;
-        padding: 10px;
+        max-height: 500px;          
+        padding: 10px;              
     }
 
-    /* Nav buttons style for mobile */
+    /* Mobile nav buttons */
     .nav-button {
-        width: 150px;
+        width: 150px; 
         text-align: left;
         background-color: transparent;
         padding: 10px 16px;
@@ -241,13 +249,6 @@ hr {
     .nav-button:hover {
         background-color: rgb(147, 57, 150);
         color: white;
-    }
-
-    /* Header logo bigger on mobile */
-    .header-logo {
-        width: 200px;
-        top: 10px;
-        left: 10px;
     }
 
     /* Header text smaller */
