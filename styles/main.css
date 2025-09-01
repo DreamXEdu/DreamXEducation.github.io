@@ -120,7 +120,7 @@ hr {
 
 /* Desktop logo inside navbar */
 .navbar .nav-logo.desktop-logo img {
-    width: 60px;  /* adjust this to make it bigger/smaller */
+    width: 240px;  /* adjust this to make it bigger/smaller */
     height: auto;
     vertical-align: middle;
 }
