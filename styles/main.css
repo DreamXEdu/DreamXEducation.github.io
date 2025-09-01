@@ -113,11 +113,10 @@ hr {
 
 /* --- Navigation Bar --- */
 /* Desktop logo inside navbar */
-.nav-logo.desktop-logo img {
-    width: 100px;
+.navbar .nav-logo.desktop-logo img {
+    width: 70px;
     height: auto;
-    margin-right: 15px;
-    vertical-align: middle; /* keeps logo aligned with buttons */
+    vertical-align: middle;
 }
 
 /* Mobile logo inside header */
